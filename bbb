@@ -1,0 +1,24 @@
+public class ProbatuZatikiLista {
+    public static void main(String[] args) {
+        ZatikiLista lista = new ZatikiLista();
+        
+        Zatiki z1 = new Zatiki(2, 3);
+        Zatiki z2 = new Zatiki(4, 6);
+        Zatiki z3 = new Zatiki(1, 2);
+
+        lista.erantsiZatikia(z1);
+        lista.erantsiZatikia(z2);
+        lista.erantsiZatikia(z3);
+
+        System.out.println("1-Zerrenda hutsa denean:");
+        lista.hustu();
+        System.out.println("Zerrendan dagoen zatiki kopurua: " + lista.zenbatZatiki());
+        System.out.println();
+
+        System.out.println("2-Zatiki bat erantsi ondoren:");
+        lista.erantsiZatikia(z1);
+        System.out.println("Zerrendan dagoen zatiki kopurua: " + lista.zenbatZatiki());
+        System.out.println("Zerrendako azken zatikia:");
+        lista.zatikiaPosizioan(lista.zenbatZatiki() - 1).put();
+    }
+}
